@@ -1,0 +1,99 @@
+/* Accordion.css */
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion > div {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion h3 {
+    margin: 0;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion h3:hover {
+    background-color: #0056b3;
+}
+
+.accordion h3 span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.accordion span {
+    cursor: pointer;
+}
+
+.accordion div > div {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f1f1f1;
+    border-radius: 0 0 10px 10px;
+    animation: slideDown 0.3s ease;
+}
+.button-multiple-active {
+    background-color: #28a745;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    margin: 15px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+}
+
+button:hover {
+    /* background-color: #0056b3; */
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 10px;
+    }
+
+    .accordion h3 {
+        font-size: 16px;
+    }
+
+    .accordion div > div {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
